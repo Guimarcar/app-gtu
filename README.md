@@ -1,27 +1,51 @@
-# AppGtu
+# AppGTU
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+## Gestão de Transporte Universitário
 
-## Development server
+### Trabalho de Conclusão de Curso
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Ciência da Computação - UniFAJ 2020
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.0.3
 
-## Build
+## Dependências
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para ter o projeto em sua maquina e conseguir rodar o servidor local, precisará de alguns programas bases, são eles:
 
-## Running unit tests
+- [Git](https://git-scm.com/downloads)
+- [Node](https://nodejs.org/en/download/)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Clone
 
-## Running end-to-end tests
+Para clonar o projeto em sua maquina execute `git clone https://github.com/Guimarcar/app-gtu.git` no diretório desejado.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Puxar dependências
 
-## Further help
+Para visualizar o projeto precisará fazer a instalação de algumas dependências, execute `npm install` na raiz do diretório do projeto clonado.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Servidor de desenvolvimento
+
+Executar `ng serve` para um servidor de desenvolvimento. Navegar para `http://localhost:4200/`. A aplicação deverá recarregar automaticamente se você alterar qualquer um dos arquivos de origem.
+
+## Gerador de código
+
+Executar `ng generate component component-name` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Contruir
+
+Executar `ng build` para construir ("buildar") o projeto. Os artefatos de construção serão armazenados no diretório `dist/`. Utilize `--prod` para uma construção de produção.
+
+## Rodar testes unitários
+
+Execute `ng test` para testes unitários via [Karma](https://karma-runner.github.io).
+
+## Rodar end-to-end testes
+
+Executar `ng e2e` para testes end-to-end via [Protractor](http://www.protractortest.org/).
+
+## Mais
+
+Para obter mais ajuda em Angular CLI, use `ng help` ou vá para o [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
