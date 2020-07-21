@@ -25,9 +25,14 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/materialize-css/dist/css/materialize.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/materialize-css/dist/js/materialize.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,9 +97,14 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/materialize-css/dist/css/materialize.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/materialize-css/dist/js/materialize.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/hammerjs/hammer.min.js"
+            ]
           }
         },
         "lint": {
@@ -105,9 +115,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
