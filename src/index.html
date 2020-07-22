@@ -34,5 +34,29 @@
       >Por favor habilite o JavaScript para continuar usando essa
       aplicação.</noscript
     >
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAS_PvmDvuLhO9tw2Bqy-fHCaP_Cp5icEA",
+        authDomain: "app-gtu.firebaseapp.com",
+        databaseURL: "https://app-gtu.firebaseio.com",
+        projectId: "app-gtu",
+        storageBucket: "app-gtu.appspot.com",
+        messagingSenderId: "740159935232",
+        appId: "1:740159935232:web:0340c594f731671f7919e5",
+        measurementId: "G-1HS56VFZ94",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
