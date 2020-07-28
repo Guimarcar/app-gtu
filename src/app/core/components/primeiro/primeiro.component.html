@@ -20,3 +20,17 @@
     </div>
   </form>
 </div>
+
+<div *ngIf="user.uid | async as uid; else login">
+  Logado com -> {{ uid }}
+  <div *ngIf="user.isAdmin | async">Logado como Motorista!</div>
+  <br />
+  <button (click)="user.deslogar()">Deslogar</button>
+</div>
+
+<ng-template #login>
+  <div>Você não está logado!</div>
+  <button (click)="user.logar()">Logar</button>
+</ng-template>
+
+<br />

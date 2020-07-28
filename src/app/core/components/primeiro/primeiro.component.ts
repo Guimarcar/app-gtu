@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { UserAuthService } from 'src/app/shared/services/auth/user-auth.service';
 
 @Component({
   templateUrl: './primeiro.component.html',
@@ -9,7 +9,7 @@ export class PrimeiroComponent implements OnInit {
   private isPassword = true;
   public eye = 'visibility';
 
-  constructor() {}
+  constructor(public user: UserAuthService) {}
 
   ngOnInit(): void {}
 
