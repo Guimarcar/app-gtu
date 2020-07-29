@@ -36,9 +36,15 @@ export class UserAuthService {
     private db2: AngularFirestore
   ) {}
 
-  logar() {
+  logar(email?, senha?) {
     console.log('LOGANDO!');
-    this.fAuth.signInWithPopup(new auth.GoogleAuthProvider());
+    // this.fAuth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.fAuth.signInWithEmailAndPassword(email, senha);
+    // this.fAuth.createUserWithEmailAndPassword(email, senha).catch(function (error) {
+    //   var errorCode = error.code;
+    //   var errorMessage = error.message;
+    //   console.log(errorCode, ' - ', errorMessage);
+    // });
   }
 
   deslogar() {

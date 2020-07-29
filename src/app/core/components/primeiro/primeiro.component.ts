@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserAuthService } from 'src/app/shared/services/auth/user-auth.service';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   templateUrl: './primeiro.component.html',
@@ -9,9 +10,16 @@ export class PrimeiroComponent implements OnInit {
   private isPassword = true;
   public eye = 'visibility';
 
-  constructor(public user: UserAuthService) {}
+  formulario: FormGroup;
 
-  ngOnInit(): void {}
+  constructor(public user: UserAuthService, private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      email: [null],
+      senha: [null],
+    });
+  }
 
   alternaTipo() {
     if (this.isPassword) {

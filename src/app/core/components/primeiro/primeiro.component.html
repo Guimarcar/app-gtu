@@ -1,19 +1,24 @@
 <div class="row">
-  <form class="col s12">
+  <form class="col s12" [formGroup]="formulario">
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons prefix">mail_outline</i>
-        <input id="email" type="email" class="validate" />
+        <input id="email" type="email" class="validate" formControlName="email" />
         <label for="email">Email</label>
         <span class="helper-text" data-error="Email inválido!"></span>
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">vpn_key</i>
-        <input id="password" [type]="TipoCampo" class="validate" />
+        <input id="password" [type]="TipoCampo" class="validate" formControlName="senha" />
         <i class="material-icons prefix eye" (click)="alternaTipo()">{{ eye }}</i>
         <label for="password">Senha</label>
       </div>
-      <button class="btn waves-effect waves-light deep-purple accent-4" type="submit" name="action">
+      <button
+        [disabled]="false"
+        class="btn waves-effect waves-light deep-purple accent-4"
+        type="submit"
+        name="action"
+      >
         Entrar
         <i class="material-icons right">send</i>
       </button>
@@ -30,7 +35,7 @@
 
 <ng-template #login>
   <div>Você não está logado!</div>
-  <button (click)="user.logar()">Logar</button>
+  <button (click)="user.logar(formulario.value.email, formulario.value.senha)">Logar</button>
 </ng-template>
 
 <br />
