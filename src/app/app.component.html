@@ -1,5 +1,5 @@
 <header>
-  <nav>
+  <nav *ngIf="logado">
     <div class="nav-wrapper deep-purple accent-4">
       <a href="#" class="brand-logo">GTU</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -15,4 +15,8 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer>Footer</footer>
+<footer *ngIf="footer">
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</footer>

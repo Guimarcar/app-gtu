@@ -32,10 +32,21 @@
         z-index: 2;
         width: 20rem;
         height: 12.5rem;
-        top: 25%;
+        top: 15%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
+        animation-name: slidein;
+        animation-duration: 2s;
+      }
+      @keyframes slidein {
+        from {
+          top: -7rem;
+        }
+
+        to {
+          top: 15%;
+        }
       }
       .start-loading {
         width: 7rem;

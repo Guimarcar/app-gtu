@@ -14,6 +14,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoginComponent } from './core/components/login/login.component';
 
 var firebaseConfig = {
   apiKey: 'AIzaSyAS_PvmDvuLhO9tw2Bqy-fHCaP_Cp5icEA',
@@ -27,7 +28,7 @@ var firebaseConfig = {
 };
 
 @NgModule({
-  declarations: [AppComponent, PrimeiroComponent, SegundoComponent, ErroComponent],
+  declarations: [AppComponent, PrimeiroComponent, SegundoComponent, ErroComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

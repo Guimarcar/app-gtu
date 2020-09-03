@@ -1,0 +1,35 @@
+<img class="logo" src="assets/logo.png" alt="Logo App GTU" />
+
+<form [formGroup]="formulario">
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">mail_outline</i>
+      <input id="email" type="email" class="validate" formControlName="email" />
+      <label for="email">Email</label>
+      <span class="helper-text" data-error="Email inválido!"></span>
+    </div>
+    <div class="input-field col s12">
+      <i class="material-icons prefix">vpn_key</i>
+      <input id="password" [type]="TipoCampo" class="validate" formControlName="senha" />
+      <i class="material-icons prefix eye" (click)="alternaTipo()">{{ eye }}</i>
+      <label for="password">Senha</label>
+    </div>
+    <button
+      [disabled]="formulario"
+      class="btn waves-effect waves-light deep-purple accent-4"
+      type="submit"
+      name="action"
+    >
+      Entrar
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+</form>
+<p class="esqueci-senha">Esqueci minha senha</p>
+
+<div class="mais">
+  <div class="cadastro">Cadastre-se aqui</div>
+  <img class="seta seta-esq" src="assets/seta.png" alt="seta-esq" />
+  <img class="seta seta-dir" src="assets/seta.png" alt="seta-dir" />
+  <div class="sobre">Sobre o App aqui</div>
+</div>

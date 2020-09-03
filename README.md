@@ -34,7 +34,7 @@ Executar `ng serve` para um servidor de desenvolvimento. Navegar para `http://lo
 
 Executar `ng generate component component-name` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Contruir
+## Construir
 
 Executar `ng build` para construir ("buildar") o projeto. Os artefatos de construção serão armazenados no diretório `dist/`. Utilize `--prod` para uma construção de produção.
 

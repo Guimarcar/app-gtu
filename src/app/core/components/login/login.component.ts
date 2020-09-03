@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { UserAuthService } from 'src/app/shared/services/auth/user-auth.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  templateUrl: './primeiro.component.html',
-  styleUrls: ['./primeiro.component.css'],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
-export class PrimeiroComponent implements OnInit {
+export class LoginComponent implements OnInit {
   private isPassword = true;
   public eye = 'visibility';
-
   formulario: FormGroup;
 
-  constructor(public user: UserAuthService, private formBuilder: FormBuilder) {
-    localStorage.setItem('logado', 'true');
-    localStorage.setItem('rodape', 'true');
+  constructor(private formBuilder: FormBuilder) {
+    localStorage.setItem('logado', 'false');
+    localStorage.setItem('rodape', 'false');
   }
 
   ngOnInit(): void {
@@ -23,6 +21,15 @@ export class PrimeiroComponent implements OnInit {
       senha: [null],
     });
   }
+
+  // enviarDados() {
+  //   const dadosFormulario = this.formulario.value;
+
+  //   alert(`Entrou com o usuário ${this.formulario.value}`);
+  //   console.log(this.formulario);
+
+  //   this.formulario.reset();
+  // }
 
   alternaTipo() {
     if (this.isPassword) {
