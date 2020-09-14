@@ -12,6 +12,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  voltar() {
+    history.back();
+  }
+
   get logado(): boolean {
     return localStorage.getItem('logado') === 'true' ? true : false;
   }

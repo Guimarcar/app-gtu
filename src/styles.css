@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  font-family: 'Ubuntu', sans-serif;
+  --gtu-fonte-primaria: 'Ubuntu', sans-serif;
+  --gtu-fonte-secundaria: 'Roboto', sans-serif;
+  font-family: var(--gtu-fonte-primaria);
+  --gtu-branco: ;
+  --gtu-preto-primaria: ;
+  --gtu-preto-secundaria: ;
+  --gtu-preto-light: ;
+  --gtu-roxo-primaria: ;
+  --gtu-roxo-secundaria: ;
+  --gtu-roxo-light: ;
+  --gtu-vermelho-primaria: ;
+  --gtu-vermelho-secundaria: ;
+  --gtu-vermelho-light: ;
+  --gtu-azul-primaria: ;
+  --gtu-azul-secundaria: ;
+  --gtu-azul-light: ;
+  --gtu-verde-primaria: ;
+  --gtu-verde-secundaria: ;
+  --gtu-verde-light: ;
 }

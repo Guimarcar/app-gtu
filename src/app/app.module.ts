@@ -15,6 +15,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './core/components/login/login.component';
+import { CadastroComponent } from './core/components/cadastro/cadastro.component';
+import { SobreComponent } from './core/components/sobre/sobre.component';
+import { ContatoComponent } from './core/components/contato/contato.component';
+import { AgradecimentosComponent } from './core/components/agradecimentos/agradecimentos.component';
 
 var firebaseConfig = {
   apiKey: 'AIzaSyAS_PvmDvuLhO9tw2Bqy-fHCaP_Cp5icEA',
@@ -28,7 +32,7 @@ var firebaseConfig = {
 };
 
 @NgModule({
-  declarations: [AppComponent, PrimeiroComponent, SegundoComponent, ErroComponent, LoginComponent],
+  declarations: [AppComponent, PrimeiroComponent, SegundoComponent, ErroComponent, LoginComponent, CadastroComponent, SobreComponent, ContatoComponent, AgradecimentosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

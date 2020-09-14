@@ -1,0 +1,44 @@
+img.logo {
+  width: 6.5rem;
+  display: block;
+  margin: 2.5rem auto 0;
+}
+
+.img-contato {
+  width: 5rem;
+}
+
+.conteudo {
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-top: 2.2rem;
+}
+
+.texto {
+  text-align: justify;
+}
+
+.contato {
+  display: flex;
+  margin: 2.5rem 0;
+}
+
+.dados {
+  line-height: 1rem;
+  margin-left: 1rem;
+}
+
+.btn {
+  display: block;
+  width: 15rem;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.baixo {
+  margin-bottom: 2rem;
+}
