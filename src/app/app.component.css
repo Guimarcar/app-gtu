@@ -6,8 +6,10 @@ footer {
   background-color: #bce0ff;
   min-width: 100%;
   padding: 0.5rem;
-  position: absolute;
   bottom: 0;
+  padding: 0 0 1rem;
+  line-height: 0.8rem;
+  margin-top: 2rem;
 }
 
 div.footer {
@@ -16,6 +18,8 @@ div.footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .ml-1 {

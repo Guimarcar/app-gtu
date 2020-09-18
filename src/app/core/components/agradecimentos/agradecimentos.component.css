@@ -1,0 +1,30 @@
+img.logo {
+  width: 6.5rem;
+  display: block;
+  margin: 2.5rem auto 0;
+}
+
+.conteudo {
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-top: 2.2rem;
+}
+
+.texto {
+  text-align: justify;
+}
+
+.btn {
+  display: block;
+  width: 15rem;
+  margin: 1rem auto;
+  border-radius: 1rem;
+}
+
+.baixo {
+  margin-bottom: 2rem;
+}

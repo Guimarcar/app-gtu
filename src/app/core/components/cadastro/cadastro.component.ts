@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    localStorage.setItem('logado', 'true');
+    localStorage.setItem('rodape', 'true');
   }
 
+  ngOnInit(): void {}
 }
