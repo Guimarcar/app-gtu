@@ -2,6 +2,10 @@
   margin-left: 1rem;
 }
 
+main {
+  min-height: 71.5vh;
+}
+
 footer {
   background-color: #bce0ff;
   min-width: 100%;

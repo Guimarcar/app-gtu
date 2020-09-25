@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,13 +15,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { LoginComponent } from './core/components/login/login.component';
 import { CadastroComponent } from './core/components/cadastro/cadastro.component';
 import { SobreComponent } from './core/components/sobre/sobre.component';
 import { ContatoComponent } from './core/components/contato/contato.component';
 import { AgradecimentosComponent } from './core/components/agradecimentos/agradecimentos.component';
 
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: 'AIzaSyAS_PvmDvuLhO9tw2Bqy-fHCaP_Cp5icEA',
   authDomain: 'app-gtu.firebaseapp.com',
   databaseURL: 'https://app-gtu.firebaseio.com',
@@ -32,12 +34,23 @@ var firebaseConfig = {
 };
 
 @NgModule({
-  declarations: [AppComponent, PrimeiroComponent, SegundoComponent, ErroComponent, LoginComponent, CadastroComponent, SobreComponent, ContatoComponent, AgradecimentosComponent],
+  declarations: [
+    AppComponent,
+    PrimeiroComponent,
+    SegundoComponent,
+    ErroComponent,
+    LoginComponent,
+    CadastroComponent,
+    SobreComponent,
+    ContatoComponent,
+    AgradecimentosComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),

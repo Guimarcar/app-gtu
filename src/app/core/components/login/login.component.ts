@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   templateUrl: './login.component.html',
@@ -10,16 +11,31 @@ export class LoginComponent implements OnInit {
   public eye = 'visibility';
   formulario: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
     localStorage.setItem('logado', 'false');
     localStorage.setItem('rodape', 'false');
   }
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      email: [null],
-      senha: [null],
+      // Regex email
+      // /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i
+      email: [null, [Validators.required, Validators.email]],
+      senha: [null, [Validators.required, Validators.minLength(3)]],
     });
+  }
+
+  onSubmit() {
+    console.log(this.formulario);
+
+    this.http.post('https://httpbin.org/post', JSON.stringify(this.formulario.value)).subscribe(
+      (dados) => {
+        console.log(dados);
+        // reset do form
+        this.formulario.reset();
+      },
+      (error: any) => console.error(error)
+    );
   }
 
   // enviarDados() {

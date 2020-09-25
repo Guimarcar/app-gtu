@@ -2,6 +2,7 @@ img.logo {
   width: 7.5rem;
   display: block;
   margin: 3rem auto 0;
+  user-select: none;
 }
 
 .row {
@@ -19,6 +20,10 @@ img.logo {
   width: 10rem;
   margin-top: 2rem;
   border-radius: 1rem;
+}
+
+.material-icons {
+  user-select: none;
 }
 
 .eye {
