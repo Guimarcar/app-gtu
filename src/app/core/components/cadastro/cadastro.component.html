@@ -1,3 +1,117 @@
-<div class="container">
+<!-- <div class="container">
   <p>LOIANE Curso Angular #96</p>
+</div> -->
+<img class="logo" src="assets/logo.png" alt="Logo App GTU" />
+
+<div class="header" *ngIf="exibeFormulario === ''">
+  <div class="texto">
+    <h1>Cadastre-se</h1>
+    <h3>Escolha sua categoria</h3>
+  </div>
+
+  <div class="classe-botoes">
+    <button class="btn waves-effect waves-light deep-purple accent-4" (click)="isMotorista(false)">
+      PASSAGEIRO
+      <i class="material-icons right">airline_seat_recline_normal</i>
+    </button>
+
+    <button class="btn waves-effect waves-light deep-purple accent-4" (click)="isMotorista(true)">
+      MOTORISTA
+      <i class="material-icons right">directions_bus</i>
+    </button>
+  </div>
+
+  <div class="saber-mais">
+    <p>Quer saber mais sobre as funcionalidades das categorias?</p>
+
+    <button class="btn waves-effect waves-light deep-purple accent-1" (click)="abrirModal()">
+      Saber mais
+      <i class="material-icons right">help</i>
+    </button>
+  </div>
+</div>
+
+<div class="form-passageiro" *ngIf="exibeFormulario === 'passageiro'">
+  <div class="texto">
+    <h3>Cadastre-se como PASSAGEIRO</h3>
+  </div>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mail_outline</i>
+        <input id="email" type="email" class="validate" formControlName="email" />
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="Email inválido!"></span>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">vpn_key</i>
+        <input id="password" class="validate" formControlName="senha" />
+        <label for="password">Senha</label>
+      </div>
+      <button
+        [disabled]="!formulario.valid"
+        class="btn waves-effect waves-light deep-purple accent-4"
+        type="submit"
+        name="action"
+      >
+        Entrar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </form>
+</div>
+
+<div class="form-motorista" *ngIf="exibeFormulario === 'motorista'">
+  <div class="texto">
+    <h3>Cadastre-se como MOTORISTA</h3>
+  </div>
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mail_outline</i>
+        <input id="email" type="email" class="validate" formControlName="email" />
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="Email inválido!"></span>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">vpn_key</i>
+        <input id="password" class="validate" formControlName="senha" />
+        <label for="password">Senha</label>
+      </div>
+      <button
+        [disabled]="!formulario.valid"
+        class="btn waves-effect waves-light deep-purple accent-4"
+        type="submit"
+        name="action"
+      >
+        Entrar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </form>
+</div>
+
+<div class="modal-saber-mais" *ngIf="modal" (click)="fecharModal()">
+  <div class="modal-content">
+    <span class="modal-close" (click)="fecharModal()">&times;</span>
+    <div class="conteudo">
+      <p><strong>Funcionalidades do PASSAGEIRO</strong></p>
+      <ol>
+        <li>Pode criar ou entrar em um grupo pré criado.</li>
+        <li>Pode visualizar o transporte em tempo real.</li>
+        <li>Pode visualizar o status de outros passageiros.</li>
+        <li>Pode mandar mensagem no chat do grupo.</li>
+        <li>Pode falar diretamente com o motorista.</li>
+      </ol>
+
+      <p><strong>Funcionalidades do MOTORISTA</strong></p>
+      <ol>
+        <li>Pode criar ou entrar em um grupo pré criado.</li>
+        <li>Pode visualizar a rota da viagem dinamicamente.</li>
+        <li>Pode visualizar o status de todos os passageiros.</li>
+        <li>Pode mandar mensagem no chat do grupo.</li>
+        <li>Pode falar diretamente com algum passageiro.</li>
+      </ol>
+    </div>
+  </div>
 </div>
