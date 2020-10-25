@@ -29,6 +29,7 @@ Para visualizar o projeto precisará fazer a instalação de algumas dependênci
 ## Servidor de desenvolvimento
 
 Executar `ng serve` para um servidor de desenvolvimento. Navegar para `http://localhost:4200/`. A aplicação deverá recarregar automaticamente se você alterar qualquer um dos arquivos de origem.
+(Ou executar `npm run start-dev` para um servidor de desenvolvimento na porta 4201, rodando aberto na rede.)
 
 ## Gerador de código
 
