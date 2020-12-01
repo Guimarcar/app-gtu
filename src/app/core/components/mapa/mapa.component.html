@@ -1,0 +1,17 @@
+<div class="fundo">
+  <img *ngIf="verMapa === 1" src="/assets/mapa1.jpg" class="mapa" alt="mapa1">
+  <img *ngIf="verMapa === 2" src="/assets/mapa2.jpg" class="mapa" alt="mapa1">
+  <img *ngIf="verMapa === 3" src="/assets/mapa3.jpg" class="mapa" alt="mapa1">
+
+  <div class="estimativa">Estimativa: {{ this.estimativa }}</div>
+
+  <div *ngIf="mapaVisivel !== 1" (click)="recentrar()" class="recentrar">recentrar</div>
+  <div *ngIf="mapaVisivel < 3" (click)="zoom(1)" class="zoom">-</div>
+  <div *ngIf="mapaVisivel > 1" (click)="zoom(-1)" class="zoom">+</div>
+</div>
+
+<footer>
+  <i class="material-icons" (click)="menu()">arrow_back_ios</i>
+  <i class="material-icons map">map</i>
+  <i class="material-icons" (click)="chamada()">check_circle_outline</i>
+</footer>

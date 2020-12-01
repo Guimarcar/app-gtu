@@ -1,0 +1,50 @@
+{
+  "tipo": "motorista",
+  "id": 1,
+  "nome": "Vinicius de Cassio Souza",
+  "endereco": {
+    "estado": "SP",
+    "cidade": "Amparo",
+    "bairro": "Chácara São João",
+    "rua": "",
+    "numero": "",
+    "complemento": ""
+  },
+  "contatoA": "(19) 99916-1361",
+  "contatoB": "",
+  "grupo": 1
+}
+
+{
+  "tipo": "passageiro",
+  "id": 1,
+  "nome": "Guilherme Marques Carneiro",
+  "endereco": {
+    "estado": "SP",
+    "cidade": "Mogi Mirim",
+    "bairro": "Jardim Scomparim",
+    "rua": "Av. Pedro Botesi",
+    "numero": "2555",
+    "complemento": ""
+  },
+  "contatoA": "(19) 98178-2192",
+  "contatoB": "",
+  "grupo": 1
+}
+
+{
+  "tipo": "passageiro",
+  "id": 2,
+  "nome": "Leonardo Luiz Catini",
+  "endereco": {
+    "estado": "SP",
+    "cidade": "Mogi Mirim",
+    "bairro": "Chácaras Sol Nascente",
+    "rua": "Rua Tubinambá",
+    "numero": "87",
+    "complemento": ""
+  },
+  "contatoA": "(19) 99686-9410",
+  "contatoB": "",
+  "grupo": 1
+}

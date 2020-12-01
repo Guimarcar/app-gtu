@@ -31,10 +31,28 @@ img.logo {
   cursor: pointer;
 }
 
+.div-login-invalido {
+  text-align: center;
+}
+
+.login-invalido {
+  color: red;
+  margin-top: -1rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .esqueci-senha {
+  color: rgb(0, 50, 189);
   text-align: center;
   margin-top: 2.5rem;
   cursor: pointer;
+}
+
+.btn {
+  margin-top: 0rem !important;
 }
 
 div.mais {

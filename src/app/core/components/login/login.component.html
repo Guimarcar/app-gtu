@@ -14,6 +14,14 @@
       <i class="material-icons prefix eye" (click)="alternaTipo()">{{ eye }}</i>
       <label for="password">Senha</label>
     </div>
+    <div class="div-login-invalido">
+      <p *ngIf="!loginInvalido" class="login-invalido hidden">
+        asd
+      </p>
+      <p *ngIf="loginInvalido" class="login-invalido">
+        E-mail ou senha inválidos.
+      </p>
+    </div>
     <button
       [disabled]="!formulario.valid"
       class="btn waves-effect waves-light deep-purple accent-4"

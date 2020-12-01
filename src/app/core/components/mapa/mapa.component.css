@@ -1,0 +1,72 @@
+.fundo {
+  background-color: var(--gtu-roxo-secundaria);
+}
+
+.mapa {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.recentrar {
+  position: absolute;
+  display: block;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 1rem;
+  z-index: 99;
+  bottom: 6rem;
+  left: 2rem;
+  opacity: 0;
+}
+
+.zoom {
+  position: absolute;
+  display: block;
+  width: 3rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  z-index: 99;
+  right: 2rem;
+  bottom: 6rem;
+}
+
+.zoom + .zoom {
+  bottom: 8rem;
+}
+
+.estimativa {
+  position: absolute;
+  z-index: 99;
+  background-color: white;
+  border-radius: 1rem;
+  width: 10rem;
+  height: 2rem;
+  text-align: center;
+  color: var(--gtu-roxo-primaria);
+  font-size: 1.1rem;
+  top: 9rem;
+  left: 1rem;
+}
+
+footer {
+  background-color: var(--gtu-roxo-primaria);
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+}
+
+.material-icons {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.map {
+  color: rgb(0, 0, 0);
+}

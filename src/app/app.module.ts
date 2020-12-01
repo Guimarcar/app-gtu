@@ -21,6 +21,9 @@ import { CadastroComponent } from './core/components/cadastro/cadastro.component
 import { SobreComponent } from './core/components/sobre/sobre.component';
 import { ContatoComponent } from './core/components/contato/contato.component';
 import { AgradecimentosComponent } from './core/components/agradecimentos/agradecimentos.component';
+import { MapaComponent } from './core/components/mapa/mapa.component';
+import { MenuComponent } from './core/components/menu/menu.component';
+import { ChamadaComponent } from './core/components/chamada/chamada.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAS_PvmDvuLhO9tw2Bqy-fHCaP_Cp5icEA',
@@ -44,6 +47,9 @@ const firebaseConfig = {
     SobreComponent,
     ContatoComponent,
     AgradecimentosComponent,
+    MapaComponent,
+    MenuComponent,
+    ChamadaComponent,
   ],
   imports: [
     BrowserModule,

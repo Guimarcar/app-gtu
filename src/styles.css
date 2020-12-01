@@ -7,8 +7,8 @@ body {
   --gtu-preto-primaria: ;
   --gtu-preto-secundaria: ;
   --gtu-preto-light: ;
-  --gtu-roxo-primaria: ;
-  --gtu-roxo-secundaria: ;
+  --gtu-roxo-primaria: #6200ea;
+  --gtu-roxo-secundaria: #1f004a;
   --gtu-roxo-light: ;
   --gtu-vermelho-primaria: ;
   --gtu-vermelho-secundaria: ;
@@ -19,4 +19,8 @@ body {
   --gtu-verde-primaria: ;
   --gtu-verde-secundaria: ;
   --gtu-verde-light: ;
+}
+
+.btn {
+  border-radius: 1rem;
 }
