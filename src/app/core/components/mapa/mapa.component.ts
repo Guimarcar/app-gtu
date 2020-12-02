@@ -9,7 +9,10 @@ export class MapaComponent implements OnInit {
   public mapaVisivel = 1;
   public estimativa: string;
 
-  constructor(private route: Router) {}
+  constructor(private route: Router) {
+    localStorage.setItem('logado', 'false');
+    localStorage.setItem('rodape', 'false');
+  }
 
   ngOnInit(): void {
     this.estimativa = this.calcularHora(48);

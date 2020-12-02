@@ -11,10 +11,12 @@ import { ErroComponent } from './core/components/erro/erro.component';
 import { SobreComponent } from './core/components/sobre/sobre.component';
 import { MenuComponent } from './core/components/menu/menu.component';
 import { ChamadaComponent } from './core/components/chamada/chamada.component';
+import { PerfilComponent } from './core/components/perfil/perfil.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'chamada', component: ChamadaComponent },
   { path: 'cadastro', component: CadastroComponent },

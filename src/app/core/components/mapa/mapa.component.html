@@ -6,8 +6,8 @@
   <div class="estimativa">Estimativa: {{ this.estimativa }}</div>
 
   <div *ngIf="mapaVisivel !== 1" (click)="recentrar()" class="recentrar">recentrar</div>
-  <div *ngIf="mapaVisivel < 3" (click)="zoom(1)" class="zoom">-</div>
-  <div *ngIf="mapaVisivel > 1" (click)="zoom(-1)" class="zoom">+</div>
+  <div *ngIf="mapaVisivel < 3" (click)="zoom(1)" class="zoom menos">-</div>
+  <div *ngIf="mapaVisivel > 1" (click)="zoom(-1)" class="zoom mais">+</div>
 </div>
 
 <footer>

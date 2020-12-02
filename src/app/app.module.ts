@@ -24,6 +24,7 @@ import { AgradecimentosComponent } from './core/components/agradecimentos/agrade
 import { MapaComponent } from './core/components/mapa/mapa.component';
 import { MenuComponent } from './core/components/menu/menu.component';
 import { ChamadaComponent } from './core/components/chamada/chamada.component';
+import { PerfilComponent } from './core/components/perfil/perfil.component';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAS_PvmDvuLhO9tw2Bqy-fHCaP_Cp5icEA',
@@ -50,6 +51,7 @@ const firebaseConfig = {
     MapaComponent,
     MenuComponent,
     ChamadaComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

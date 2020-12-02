@@ -105,7 +105,7 @@ export class LoginComponent implements OnInit {
   }
 
   get primeiroUsuario(): string {
-    return '{"tipo": "motorista","id": 1,"nome": "Vinicius de Cassio Souza","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Jardim Scomparim","rua": "Av. Pedro Botesi","numero": "2555","complemento": ""},"destino": "Rod. Campinas-Mogi Mirim, s/nº - km 127 - Tanquinho Velho, Jaguariúna - SP, 13820-000: (19) 99916-1361","contatoB": "","grupo": 1}';
+    return '{"tipo": "motorista","id": 1,"nome": "Vinicius de Cassio Souza","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Jardim Scomparim","rua": "Av. Pedro Botesi","numero": "2555","complemento": ""},"destino": "Rod. Campinas-Mogi Mirim, s/nº - km 127 - Tanquinho Velho, Jaguariúna - SP, 13820-000","contatoA": "(19) 99916-1361","contatoB": "","grupo": 1}';
   }
 
   get segundoUsuario(): string {

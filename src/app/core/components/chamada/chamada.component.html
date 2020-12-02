@@ -1,1 +1,42 @@
-<p>chamada works!</p>
+<header>
+  <nav>
+    <div class="nav-wrapper deep-purple accent-4">
+      <a class="brand-logo">GTU</a>
+    </div>
+  </nav>
+</header>
+
+<div class="conteudo">
+  <h5 *ngIf="isMotorista">Você</h5>
+  <h5 *ngIf="!isMotorista">MOTORISTA</h5>
+  <div class="motorista">
+    <img src="/assets/icons/user.jpg" class="img-usuario" alt="usuario">
+    <div class="dados">
+      <p><strong>Nome:</strong> {{ motorista.nome }}</p>
+      <p><strong>Endereço:</strong> {{ motorista.endereco.rua }}, {{ motorista.endereco.numero }}</p>
+      <p><strong>Contato:</strong> {{ motorista.contatoA }}</p>
+    </div>
+  </div>
+
+  <h5 *ngIf="isMotorista">PASSAGEIROS</h5>
+  <h5 *ngIf="!isMotorista">Outros Passageiros</h5>
+  <h6>{{ this.hoje }}</h6>
+  <div class="passageiros">
+    <div class="dados-passageiros" *ngFor="let passageiro of passageiros">
+      <img src="/assets/icons/user.jpg" class="img-usuario img-passageiro" alt="usuario">
+      <div class="passageiro">
+        <p><strong>Nome:</strong>{{ passageiro.nome }}</p>
+        <p><strong>Endereço:</strong> {{ passageiro.endereco.rua }}, {{ passageiro.endereco.numero }}</p>
+        <p><strong>Contato:</strong> {{ passageiro.contatoA }}</p>
+      </div>
+      <i *ngIf="passageiro.id%2 === 0" class="material-icons prefix check">check_circle</i>
+      <i *ngIf="passageiro.id%2 === 1" class="material-icons prefix cancel">cancel</i>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <i class="foo material-icons" (click)="menu()">arrow_back_ios</i>
+  <i class="foo material-icons" (click)="map()">map</i>
+  <i class="foo material-icons chamada">check_circle_outline</i>
+</footer>

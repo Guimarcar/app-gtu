@@ -1,1 +1,89 @@
-<p>menu works!</p>
+<header>
+  <nav>
+    <div class="nav-wrapper deep-purple accent-4">
+      <a class="brand-logo">GTU</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="">Cadastrar</a></li>
+        <li><a href="">Sobre</a></li>
+        <li><a href="">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div class="fundo">
+  <button
+  [disabled]="false"
+  class="btn waves-effect waves-light deep-purple accent-4"
+  type="button"
+  routerLink="/perfil"
+>
+    Perfil
+    <i class="material-icons right">person_outline</i>
+  </button>
+  <button
+  [disabled]="true"
+  class="btn waves-effect waves-light deep-purple accent-4"
+  type="button"
+  routerLink="/chat"
+>
+    Chat
+    <i class="material-icons right">message</i>
+  </button>
+  <button
+  [disabled]="false"
+  class="btn waves-effect waves-light deep-purple accent-4"
+  type="button"
+  (click)="modalGrupo()"
+>
+    Grupo
+    <i class="material-icons right">groups</i>
+  </button>
+  <button
+  [disabled]="false"
+  class="btn waves-effect waves-light deep-purple accent-4"
+  type="button"
+  routerLink="/mapa"
+>
+    Mapa
+    <i class="material-icons right">location_on</i>
+  </button>
+  <button
+  [disabled]="true"
+  class="btn waves-effect waves-light deep-purple accent-4"
+  type="button"
+  routerLink="/pagamento"
+>
+    Pagamento
+    <i class="material-icons right">attach_money</i>
+  </button>
+</div>
+
+<div class="modal-grupo" *ngIf="this.modal">
+  <div class="modal-content">
+    <span class="modal-close" (click)="modalGrupo()">&times;</span>
+    <div class="conteudo">
+      <div class="botoes-modal">
+        <p><strong>GRUPO</strong></p>
+        <button
+        [disabled]="false"
+        class="btn waves-effect waves-light deep-purple accent-4"
+        type="button"
+        routerLink="/chamada"
+      >
+          Criar grupo
+          <i class="material-icons right">add</i>
+        </button>
+        <button
+        [disabled]="false"
+        class="btn waves-effect waves-light deep-purple accent-4"
+        type="button"
+        routerLink="/chamada"
+      >
+          Acessar grupo
+          <i class="material-icons right">keyboard_arrow_right</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

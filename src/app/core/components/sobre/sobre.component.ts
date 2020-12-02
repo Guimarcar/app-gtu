@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
 })
 export class SobreComponent implements OnInit {
   constructor(private route: Router) {
-    if (!localStorage.getItem('token')) {
-      this.route.navigate(['login']);
-    }
+    // if (!localStorage.getItem('token')) {
+    //   this.route.navigate(['login']);
+    // }
     localStorage.setItem('logado', 'true');
     localStorage.setItem('rodape', 'false');
   }
