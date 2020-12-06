@@ -1,8 +1,11 @@
 .fundo {
   background-color: var(--gtu-roxo-secundaria);
+  height: 50rem;
+  /* height: 100%; */
 }
 
 .mapa {
+  margin-top: 1rem;
   margin-left: 5%;
   width: 90%;
   border-radius: 1rem;
@@ -11,11 +14,11 @@
 .recentrar {
   position: absolute;
   display: block;
-  width: 9rem;
-  height: 3rem;
+  width: 10rem;
+  height: 4rem;
   border-radius: 1rem;
   z-index: 99;
-  bottom: 6rem;
+  bottom: 7rem;
   left: 2rem;
   opacity: 0;
 }
@@ -35,11 +38,11 @@
 }
 
 .menos {
-  bottom: 6rem;
+  bottom: 7rem;
 }
 
 .mais {
-  bottom: 8rem;
+  bottom: 9rem;
 }
 
 .estimativa {
@@ -52,7 +55,7 @@
   text-align: center;
   color: var(--gtu-roxo-primaria);
   font-size: 1.1rem;
-  top: 9rem;
+  top: 10rem;
   left: 1rem;
 }
 

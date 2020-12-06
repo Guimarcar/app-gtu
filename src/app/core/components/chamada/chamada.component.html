@@ -10,10 +10,12 @@
   <h5 *ngIf="isMotorista">Você</h5>
   <h5 *ngIf="!isMotorista">MOTORISTA</h5>
   <div class="motorista">
-    <img src="/assets/icons/user.jpg" class="img-usuario" alt="usuario">
+    <img src="/assets/icons/user.jpg" class="img-usuario" alt="usuario" />
     <div class="dados">
       <p><strong>Nome:</strong> {{ motorista.nome }}</p>
-      <p><strong>Endereço:</strong> {{ motorista.endereco.rua }}, {{ motorista.endereco.numero }}</p>
+      <p>
+        <strong>Endereço:</strong> {{ motorista.endereco.rua }}, {{ motorista.endereco.numero }}
+      </p>
       <p><strong>Contato:</strong> {{ motorista.contatoA }}</p>
     </div>
   </div>
@@ -23,14 +25,16 @@
   <h6>{{ this.hoje }}</h6>
   <div class="passageiros">
     <div class="dados-passageiros" *ngFor="let passageiro of passageiros">
-      <img src="/assets/icons/user.jpg" class="img-usuario img-passageiro" alt="usuario">
+      <img src="/assets/icons/user.jpg" class="img-usuario img-passageiro" alt="usuario" />
       <div class="passageiro">
         <p><strong>Nome:</strong>{{ passageiro.nome }}</p>
-        <p><strong>Endereço:</strong> {{ passageiro.endereco.rua }}, {{ passageiro.endereco.numero }}</p>
+        <p>
+          <strong>Endereço:</strong> {{ passageiro.endereco.rua }}, {{ passageiro.endereco.numero }}
+        </p>
         <p><strong>Contato:</strong> {{ passageiro.contatoA }}</p>
       </div>
-      <i *ngIf="passageiro.id%2 === 0" class="material-icons prefix check">check_circle</i>
-      <i *ngIf="passageiro.id%2 === 1" class="material-icons prefix cancel">cancel</i>
+      <i *ngIf="passageiro.id % 2 === 0" class="material-icons prefix check">check_circle</i>
+      <i *ngIf="passageiro.id % 2 === 1" class="material-icons prefix cancel">cancel</i>
     </div>
   </div>
 </div>
@@ -40,3 +44,33 @@
   <i class="foo material-icons" (click)="map()">map</i>
   <i class="foo material-icons chamada">check_circle_outline</i>
 </footer>
+
+<div class="modal-presenca" *ngIf="this.modal && !isMotorista">
+  <div class="modal-content">
+    <span class="modal-close" (click)="modalPresenca()">&times;</span>
+    <div class="conteudo">
+      <div class="botoes-modal">
+        <div class="titulo-modal">
+          <div *ngIf="!marcou" class="marcar">
+            <p><strong>Hoje</strong></p>
+            <h6>{{ this.hoje }}</h6>
+            <div class="opcoes">
+              <div (click)="marcou = true; presente = true" class="aceitar">
+                <i class="material-icons prefix check">check_circle</i>
+                <p>Eu vou! 👍</p>
+              </div>
+              <div (click)="marcou = true; presente = false" class="recusar">
+                <i class="material-icons prefix cancel">cancel</i>
+                <p>Não vou! 👎</p>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="marcou" (click)="modalPresenca()" class="confirmacao">
+            <h4 *ngIf="presente">Presença marcada com sucesso! ✅</h4>
+            <h4 *ngIf="!presente">Falta marcada com sucesso.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

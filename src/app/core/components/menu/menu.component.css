@@ -1,7 +1,7 @@
 div.fundo {
   background-color: var(--gtu-roxo-secundaria);
   position: absolute;
-  height: 91.1%;
+  height: 92.2%;
   width: 100%;
   text-align: center;
 }
@@ -66,5 +66,5 @@ div.fundo {
 }
 
 .botoes-modal .btn {
-  margin-top: 1rem;
+  margin-top: 1.7rem;
 }

@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./chamada.component.css'],
 })
 export class ChamadaComponent implements OnInit {
+  modal = true;
+  presente = true;
+  marcou = false;
   motorista: Motorista;
   isMotorista = false;
   passageiros: Array<Passageiro> = [];
@@ -53,8 +56,12 @@ export class ChamadaComponent implements OnInit {
     this.route.navigateByUrl('/mapa');
   }
 
+  modalPresenca() {
+    this.modal = !this.modal;
+  }
+
   get getMotorista(): Motorista {
-    if (JSON.parse(localStorage.getItem('meuPerfil'))['tipo'] === 'motorista') {
+    if (JSON.parse(localStorage.getItem('meuPerfil')).tipo === 'motorista') {
       this.motorista = JSON.parse(localStorage.getItem('meuPerfil'));
       this.isMotorista = true;
     } else {
