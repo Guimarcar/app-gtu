@@ -1,6 +1,6 @@
 import { Passageiro } from './../../models/passageiro.model';
 import { Motorista } from './../../models/motorista.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,11 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./chamada.component.css'],
 })
 export class ChamadaComponent implements OnInit {
+  @ViewChild('minhadata') minhaData: ElementRef;
+
   modal = true;
   presente = true;
   marcou = false;
-  motorista: Motorista;
   isMotorista = false;
+  motorista: Motorista;
+  vocePassageiro: Passageiro;
   passageiros: Array<Passageiro> = [];
   numPassageiro = -1;
   dayName = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
@@ -37,7 +40,9 @@ export class ChamadaComponent implements OnInit {
     localStorage.setItem('logado', 'false');
     localStorage.setItem('rodape', 'false');
     this.getMotorista;
+    this.getVocePassageiro;
     this.getPassageiros;
+    this.presente = !(localStorage.getItem('presente') === 'false');
     this.hoje =
       this.dayName[this.now.getDay()] +
       ', ' +
@@ -53,11 +58,18 @@ export class ChamadaComponent implements OnInit {
   }
 
   map() {
+    console.log(this.minhaData.nativeElement.value);
+    console.log(this.hoje);
     this.route.navigateByUrl('/mapa');
   }
 
   modalPresenca() {
     this.modal = !this.modal;
+  }
+
+  marcarPresenca(escolha: boolean) {
+    this.presente = escolha;
+    localStorage.setItem('presente', escolha.toString());
   }
 
   get getMotorista(): Motorista {
@@ -69,6 +81,16 @@ export class ChamadaComponent implements OnInit {
       this.isMotorista = false;
     }
     return this.motorista;
+  }
+
+  get getVocePassageiro(): Passageiro {
+    if (JSON.parse(localStorage.getItem('meuPerfil')).tipo !== 'motorista') {
+      this.vocePassageiro = JSON.parse(localStorage.getItem('meuPerfil'));
+      this.isMotorista = false;
+    } else {
+      console.log('ERRO: Você passageiro não encontrado!');
+    }
+    return this.vocePassageiro;
   }
 
   get getPassageiros(): Array<Passageiro> {

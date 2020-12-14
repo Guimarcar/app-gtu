@@ -6,6 +6,8 @@
   </nav>
 </header>
 
+<input #minhadata id="date" type="date" value="{{ this.hoje }}">
+
 <div class="conteudo">
   <h5 *ngIf="isMotorista">Você</h5>
   <h5 *ngIf="!isMotorista">MOTORISTA</h5>
@@ -20,10 +22,10 @@
     </div>
   </div>
 
-  <h5 *ngIf="isMotorista">PASSAGEIROS</h5>
-  <h5 *ngIf="!isMotorista">Outros Passageiros</h5>
-  <h6>{{ this.hoje }}</h6>
-  <div class="passageiros">
+  <div *ngIf="isMotorista" class="passageiros">
+    <h5>PASSAGEIROS</h5>
+    <!-- <h6>{{ this.hoje }}</h6> -->
+    <h6>Quinta, 6 de agosto</h6>
     <div class="dados-passageiros" *ngFor="let passageiro of passageiros">
       <img src="/assets/icons/user.jpg" class="img-usuario img-passageiro" alt="usuario" />
       <div class="passageiro">
@@ -35,6 +37,24 @@
       </div>
       <i *ngIf="passageiro.id % 2 === 0" class="material-icons prefix check">check_circle</i>
       <i *ngIf="passageiro.id % 2 === 1" class="material-icons prefix cancel">cancel</i>
+    </div>
+  </div>
+
+  <div *ngIf="!isMotorista" class="passageiros">
+    <h5>Outros Passageiros</h5>
+    <!-- <h6>{{ this.hoje }}</h6> -->
+    <h6>Quinta, 6 de agosto</h6>
+    <div class="dados-passageiros">
+      <img src="/assets/icons/user.jpg" class="img-usuario img-passageiro" alt="usuario" />
+      <div class="passageiro">
+        <p><strong>Nome:</strong>{{ vocePassageiro.nome }}</p>
+        <p>
+          <strong>Endereço:</strong> {{ vocePassageiro.endereco.rua }}, {{ vocePassageiro.endereco.numero }}
+        </p>
+        <p><strong>Contato:</strong> {{ vocePassageiro.contatoA }}</p>
+      </div>
+      <i *ngIf="presente" class="material-icons prefix check">check_circle</i>
+      <i *ngIf="!presente" class="material-icons prefix cancel">cancel</i>
     </div>
   </div>
 </div>
@@ -53,13 +73,14 @@
         <div class="titulo-modal">
           <div *ngIf="!marcou" class="marcar">
             <p><strong>Hoje</strong></p>
-            <h6>{{ this.hoje }}</h6>
+            <!-- <h6>{{ this.hoje }}</h6> -->
+            <h6>Quinta, 6 de agosto</h6>
             <div class="opcoes">
-              <div (click)="marcou = true; presente = true" class="aceitar">
+              <div (click)="marcou = true; marcarPresenca(true)" class="aceitar">
                 <i class="material-icons prefix check">check_circle</i>
                 <p>Eu vou! 👍</p>
               </div>
-              <div (click)="marcou = true; presente = false" class="recusar">
+              <div (click)="marcou = true; marcarPresenca(false)" class="recusar">
                 <i class="material-icons prefix cancel">cancel</i>
                 <p>Não vou! 👎</p>
               </div>

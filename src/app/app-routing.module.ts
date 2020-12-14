@@ -12,6 +12,8 @@ import { SobreComponent } from './core/components/sobre/sobre.component';
 import { MenuComponent } from './core/components/menu/menu.component';
 import { ChamadaComponent } from './core/components/chamada/chamada.component';
 import { PerfilComponent } from './core/components/perfil/perfil.component';
+import { CloseComponent } from './core/components/close/close.component';
+import { GooglemapsComponent } from './core/components/googlemaps/googlemaps.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent },
   { path: 'agradecimentos', component: AgradecimentosComponent },
   { path: 'mapa', component: MapaComponent },
+  { path: 'googlemaps', component: GooglemapsComponent },
+  { path: 'close', component: CloseComponent },
   { path: 'primeiro', component: PrimeiroComponent },
   { path: 'segundo', component: SegundoComponent },
   { path: '**', component: ErroComponent },

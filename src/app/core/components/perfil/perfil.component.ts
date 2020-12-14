@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private route: Router) {
+    this.route.navigate(['menu']);
   }
 
+  ngOnInit(): void {}
 }

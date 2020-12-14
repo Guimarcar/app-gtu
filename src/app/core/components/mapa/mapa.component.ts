@@ -9,6 +9,18 @@ export class MapaComponent implements OnInit {
   public mapaVisivel = 1;
   public estimativa: string;
 
+  public origin: any;
+  public destination: any;
+  public destination2: any;
+  public lat: Number = -22.402714;
+  public lng: Number = -46.969692;
+  public travelMode = 'DRIVING';
+
+  public waypoints: any = [{ location: { lat: -22.434279, lng: -46.935533 } }];
+  public renderOptions = {
+    draggable: true,
+  };
+
   constructor(private route: Router) {
     localStorage.setItem('logado', 'false');
     localStorage.setItem('rodape', 'false');
@@ -16,6 +28,19 @@ export class MapaComponent implements OnInit {
 
   ngOnInit(): void {
     this.estimativa = this.calcularHora(48);
+    this.getDirection();
+  }
+
+  public change(event: any) {
+    this.waypoints = event.request.waypoints;
+  }
+
+  getDirection() {
+    this.origin = { lat: -22.402714, lng: -46.969692 };
+    this.destination = { lat: -22.715509, lng: -47.015484 };
+
+    // this.origin = 'Taipei Main Station'
+    // this.destination = 'Taiwan Presidential Office'
   }
 
   menu() {

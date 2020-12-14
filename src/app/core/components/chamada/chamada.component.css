@@ -79,6 +79,7 @@ footer {
 .opcoes {
   display: flex;
   justify-content: space-around;
+  margin-top: -1rem;
   /* margin-left: -10px; */
 }
 
@@ -90,7 +91,7 @@ footer {
 }
 
 .confirmacao {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 
 .modal-presenca {
@@ -115,7 +116,7 @@ footer {
   padding: 20px;
   border: 1px solid #888;
   width: 65%;
-  height: 35%;
+  height: 33%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -140,6 +141,10 @@ footer {
 
 .modal-content > .conteudo {
   margin-top: 2rem;
+}
+
+.conteudo {
+  margin-bottom: 6rem;
 }
 
 .botoes-modal {

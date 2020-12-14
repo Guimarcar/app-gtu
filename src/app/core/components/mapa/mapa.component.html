@@ -1,13 +1,22 @@
 <div class="fundo">
-  <img *ngIf="verMapa === 1" src="/assets/mapa1.jpg" class="mapa" alt="mapa1">
+  <!-- <img *ngIf="verMapa === 1" src="/assets/mapa1.jpg" class="mapa" alt="mapa1">
   <img *ngIf="verMapa === 2" src="/assets/mapa2.jpg" class="mapa" alt="mapa1">
-  <img *ngIf="verMapa === 3" src="/assets/mapa3.jpg" class="mapa" alt="mapa1">
+  <img *ngIf="verMapa === 3" src="/assets/mapa3.jpg" class="mapa" alt="mapa1"> -->
+
+  <agm-map [latitude]="lat" [longitude]="lng" class="agmmap">
+    <agm-direction
+    [origin]="origin"
+    [waypoints]="waypoints"
+    [destination]="destination"
+    [travelMode]="travelMode">
+    </agm-direction>
+  </agm-map>
 
   <div class="estimativa">Estimativa: {{ this.estimativa }}</div>
 
-  <div *ngIf="mapaVisivel !== 1" (click)="recentrar()" class="recentrar">recentrar</div>
+  <!-- <div *ngIf="mapaVisivel !== 1" (click)="recentrar()" class="recentrar">recentrar</div>
   <div *ngIf="mapaVisivel < 3" (click)="zoom(1)" class="zoom menos">-</div>
-  <div *ngIf="mapaVisivel > 1" (click)="zoom(-1)" class="zoom mais">+</div>
+  <div *ngIf="mapaVisivel > 1" (click)="zoom(-1)" class="zoom mais">+</div> -->
 </div>
 
 <footer>

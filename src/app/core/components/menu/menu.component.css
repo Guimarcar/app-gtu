@@ -12,6 +12,11 @@ div.fundo {
   margin-top: 4rem;
 }
 
+.iclose {
+  font-size: 2.5rem;
+  margin-left: 0.75rem;
+}
+
 .modal-grupo {
   display: block;
   position: fixed;

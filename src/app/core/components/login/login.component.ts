@@ -105,14 +105,14 @@ export class LoginComponent implements OnInit {
   }
 
   get primeiroUsuario(): string {
-    return '{"tipo": "motorista","id": 1,"nome": "Vinicius de Cassio Souza","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Jardim Scomparim","rua": "Av. Pedro Botesi","numero": "2555","complemento": ""},"destino": "Rod. Campinas-Mogi Mirim, s/nº - km 127 - Tanquinho Velho, Jaguariúna - SP, 13820-000","contatoA": "(19) 99916-1361","contatoB": "","grupo": 1}';
+    return '{"tipo": "motorista","id": 1,"nome": "Vinicius de Cassio","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Jardim Scomparim","rua": "Av. Pedro Botesi","numero": "2555","complemento": ""},"destino": "Rod. Campinas-Mogi Mirim, s/nº - km 127 - Tanquinho Velho, Jaguariúna - SP, 13820-000","contatoA": "(19) 99916-1361","contatoB": "","grupo": 1}';
   }
 
   get segundoUsuario(): string {
-    return '{"tipo": "passageiro","id": 1,"nome": "Guilherme Marques Carneiro","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Jardim Scomparim","rua": "Av. Pedro Botesi","numero": "2555","complemento": ""},"contatoA": "(19) 98178-2192","contatoB": "","grupo": 1}';
+    return '{"tipo": "passageiro","id": 1,"nome": "Guilherme Carneiro","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Jardim Scomparim","rua": "Av. Pedro Botesi","numero": "2555","complemento": ""},"contatoA": "(19) 98178-2192","contatoB": "","grupo": 1}';
   }
 
   get terceiroUsuario(): string {
-    return '{"tipo": "passageiro","id": 2,"nome": "Leonardo Luiz Catini","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Chácaras Sol Nascente","rua": "Rua Tubinambá","numero": "87","complemento": ""},"contatoA": "(19) 99686-9410","contatoB": "","grupo": 1}';
+    return '{"tipo": "passageiro","id": 2,"nome": "Leonardo Catini","endereco": {"estado": "SP","cidade": "Mogi Mirim","bairro": "Chácaras Sol Nascente","rua": "Rua Tubinambá","numero": "87","complemento": ""},"contatoA": "(19) 99686-9410","contatoB": "","grupo": 1}';
   }
 }

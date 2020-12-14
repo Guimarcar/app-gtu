@@ -1,6 +1,6 @@
 .fundo {
   background-color: var(--gtu-roxo-secundaria);
-  height: 50rem;
+  /* height: 50rem; */
   /* height: 100%; */
 }
 
@@ -55,8 +55,8 @@
   text-align: center;
   color: var(--gtu-roxo-primaria);
   font-size: 1.1rem;
-  top: 10rem;
-  left: 1rem;
+  top: 0.5rem;
+  left: 0.5rem;
 }
 
 footer {
@@ -77,4 +77,12 @@ footer {
 
 .map {
   color: rgb(0, 0, 0);
+}
+
+agm-map {
+  position: absolute;
+  height: 40.5rem;
+  width: 25rem;
+  top: 0.5%;
+  left: 1.5%;
 }
